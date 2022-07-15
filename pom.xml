@@ -7,7 +7,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>azure-integration</name>
+	<name>azure-demo-api</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,7 +36,7 @@
 						<password>${password}</password>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${muleVersion}</muleVersion>
-						<applicationName>Azure-${env}</applicationName>
+						<applicationName>azure-demo-api-${env}</applicationName>
 						<workers>${workers}</workers>
 						<workerType>${workerType}</workerType>
 						<environment>${env}</environment>
@@ -58,6 +58,12 @@
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.2</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-apikit-module</artifactId>
+			<version>1.5.8</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
